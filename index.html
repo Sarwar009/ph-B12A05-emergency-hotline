@@ -1,15 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emergency hotline</title>
     <!-- tailwind cdn -->
-</head>
-<body>
-    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-[#fff]-100 min-h-screen p-0 m-0">
+    <div
+      id="nav"
+      class="flex justify-between items-center px-8 py-4 h-[100px]"
+    >
+      <div id="brand-name" class="py-2 px-4 flex items-center">
+        <img src="./assets/logo.png" alt="Emergency-hotline" class="h-[55px]" />
+        <h3 class="text-[#00A63E] px-4 flex items-center w-[140px] font-bold text-[20px]">Emergency Service</h3>
+      </div>
+      <div id="menu" class="flex justify-between items-center gap-4">
+        <div id="fav">
+          <h6
+            class="flex justify-between items-center py-2 px-4 rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+          >
+            <span
+              id="fav-count"
+              class="px-2 text-black font-inter text-[16px] font-black text-center"
+              >0</span
+            >
+            <img src="./assets/heart.png" alt="fav" class="h-6 inline-block" />
+          </h6>
+        </div>
+        <div id="coin">
+          <h6
+            class="flex justify-between items-center py-2 px-4 rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+          >
+            <span
+              id="coin-count"
+              class="px-2 text-black font-inter text-[16px] font-black text-center"
+              >100</span
+            >
+            <img src="./assets/coin.png" alt="coin" class="h-6 inline-block" />
+          </h6>
+        </div>
+        <div id="copy">
+          <h6
+            class="flex justify-between items-center py-2 px-4 rounded-[50px] bg-[#00A63E]"
+          >
+            <span id="copy-count" class="px-2">0</span>
+            copy
+          </h6>
+        </div>
+      </div>
+    </div>
+    <!-- hero section -->
+    <div id="hero">
+        <div><img src="./assets/logo-dark.png" alt="logo"></div>
+        <div>Emergency Service Directory</div>
+        <div>Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</div>
+    </div>
 
     <!-- js file -->
-     <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
