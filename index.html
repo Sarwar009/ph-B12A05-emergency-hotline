@@ -8,18 +8,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#fff]-100 min-h-screen p-0 m-0">
-    <div
-      id="nav"
-      class="flex justify-between items-center px-8 py-4 h-[100px]"
-    >
+    <div id="nav" class="flex justify-between items-center px-8 py-4 h-[100px]">
       <div id="brand-name" class="py-2 px-4 flex items-center">
         <img src="./assets/logo.png" alt="Emergency-hotline" class="h-[55px]" />
-        <h3 class="text-[#00A63E] px-4 flex items-center w-[140px] font-bold text-[20px]">Emergency Service</h3>
+        <h3
+          class="text-[#00A63E] px-4 flex items-center w-[140px] font-bold text-[20px]"
+        >
+          Emergency Service
+        </h3>
       </div>
       <div id="menu" class="flex justify-between items-center gap-4">
-        <div id="fav">
+        <div id="fav" class="cursor-pointer">
           <h6
-            class="flex justify-between items-center py-2 px-4 rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+            class="flex justify-between items-center py-[12px] px-[36px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
           >
             <span
               id="fav-count"
@@ -29,9 +30,9 @@
             <img src="./assets/heart.png" alt="fav" class="h-6 inline-block" />
           </h6>
         </div>
-        <div id="coin">
+        <div id="coin" class="cursor-pointer">
           <h6
-            class="flex justify-between items-center py-2 px-4 rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+            class="flex justify-between items-center py-[12px] px-[36px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
           >
             <span
               id="coin-count"
@@ -41,21 +42,39 @@
             <img src="./assets/coin.png" alt="coin" class="h-6 inline-block" />
           </h6>
         </div>
-        <div id="copy">
+        <div id="copy" class="cursor-pointer">
           <h6
-            class="flex justify-between items-center py-2 px-4 rounded-[50px] bg-[#00A63E]"
+            class="flex justify-between items-center py-[12px] px-[36px] rounded-[50px] bg-[#00A63E] text-white font-inter text-[16px] font-semibold text-center"
           >
             <span id="copy-count" class="px-2">0</span>
-            copy
+            Copy
           </h6>
         </div>
       </div>
     </div>
     <!-- hero section -->
-    <div id="hero">
-        <div><img src="./assets/logo-dark.png" alt="logo"></div>
-        <div>Emergency Service Directory</div>
-        <div>Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</div>
+    <div
+      id="hero"
+      class="bg-[linear-gradient(90deg,rgba(1,50,35,1)_0%,rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-white flex flex-col justify-center items-center text-center py-3 px-[60px] h-[270px]"
+    >
+      <div>
+        <img
+          src="./assets/logo-dark.png"
+          alt="logo"
+          class="w-[92px] h-[92px]"
+        />
+      </div>
+      <div
+        class="text-white font-bold text-[24px] sm:text-[32px] md:text-[40px] text-center font-hind-madurai mt-2"
+      >
+        Emergency Service Directory
+      </div>
+      <div
+        class="text-white font-semibold text-[16px] sm:text-[12px] md:text-[18px] leading-none tracking-normal text-center font-hind-madurai mt-2"
+      >
+        Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh
+      </div>
     </div>
 
     <!-- js file -->
