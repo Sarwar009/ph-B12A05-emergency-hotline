@@ -27,19 +27,26 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="bg-[#fff]-100 min-h-screen p-0 m-0">
-    <div id="nav" class="flex justify-between items-center px-8 py-4 h-[100px]">
-      <div id="brand-name" class="py-2 px-4 flex items-center">
-        <img src="./assets/logo.png" alt="Emergency-hotline" class="h-[55px]" />
+    <!-- <div
+      id="nav"
+      class="flex justify-between items-center sm:px-8 sm:py-4 h-[100px]"
+    >
+      <div id="brand-name" class="py-1 px-2 sm:py-2 sm:px-4 flex items-center">
+        <img
+          src="./assets/logo.png"
+          alt="Emergency-hotline"
+          class="h-[55px] inline-block"
+        />
         <h3
-          class="text-[#00A63E] px-4 flex items-center w-[140px] font-bold text-[20px]"
+          class="hidden sm:flex text-[#00A63E] px-4 items-center w-[140px] font-bold text-[20px]"
         >
           Emergency Service
         </h3>
       </div>
-      <div id="menu" class="flex justify-between items-center gap-4">
+      <div id="menu" class="hidden sm:flex flex justify-between items-center gap-2 sm:gap-4">
         <div id="fav" class="cursor-pointer">
           <h6
-            class="flex justify-between items-center py-[12px] px-[36px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+            class="flex flex-col sm:flex-row justify-between items-center py-[6px] px-[18px] sm:py-[12px] sm:px-[36px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
           >
             <span
               id="fav-count"
@@ -51,7 +58,7 @@
         </div>
         <div id="coin" class="cursor-pointer">
           <h6
-            class="flex justify-between items-center py-[12px] px-[36px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+            class="flex flex-col sm:flex-row justify-between items-center py-[6px] px-[18px] sm:py-[12px] sm:px-[36px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
           >
             <span
               id="coin-count"
@@ -62,18 +69,91 @@
         </div>
         <div id="copy" class="cursor-pointer">
           <h6
-            class="flex justify-between items-center py-[12px] px-[36px] rounded-[50px] bg-[#00A63E] text-white font-inter text-[16px] font-semibold text-center"
+            class="flex flex-col sm:flex-row justify-between items-center py-[6px] px-[18px] sm:py-[12px] sm:px-[36px] rounded-[50px] bg-[#00A63E] text-white font-inter text-[16px] font-semibold text-center"
           >
             <span id="copy-count" class="px-2">0</span>
             Copy
           </h6>
         </div>
       </div>
+      
+      <div id="menu-btn" class="sm:hidden cursor-pointer px-4 py-2">
+        <i class="fa-solid fa-bars text-[24px]"></i>
+      </div>
+    </div> -->
+
+    <div
+      id="nav"
+      class="flex justify-between items-center sm:px-8 sm:py-4 h-[100px]"
+    >
+      <!-- Brand -->
+      <div id="brand-name" class="py-1 px-2 sm:py-2 sm:px-4 flex items-center">
+        <img
+          src="./assets/logo.png"
+          alt="Emergency-hotline"
+          class="h-[55px] inline-block"
+        />
+        <h3
+          class="hidden sm:flex text-[#00A63E] px-4 items-center w-[140px] font-bold text-[20px]"
+        >
+          Emergency Service
+        </h3>
+      </div>
+
+      <!-- Menu Items -->
+      <div
+        id="menu"
+        class="hidden sm:flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 absolute sm:static top-[100px] left-0 w-full sm:w-auto bg-[#f9f9f9] sm:bg-transparent shadow-md sm:shadow-none px-4 py-6 sm:p-0 z-50 text-center"
+      >
+        <!-- Fav -->
+        <div id="fav" class="cursor-pointer flex justify-center">
+          <h6
+            class="flex flex-row justify-center items-center py-[10px] px-[22px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+          >
+            <span
+              id="fav-count"
+              class="px-2 text-black font-inter text-[16px] font-black text-center"
+              >0</span
+            >
+            <img src="./assets/heart.png" alt="fav" class="h-6 inline-block" />
+          </h6>
+        </div>
+
+        <!-- Coin -->
+        <div id="coin" class="cursor-pointer flex justify-center">
+          <h6
+            class="flex flex-row justify-center items-center py-[10px] px-[22px] rounded-[50px] bg-[rgba(65,255,107,0.1)]"
+          >
+            <span
+              id="coin-count"
+              class="px-2 text-black font-inter text-[16px] font-black text-center"
+            ></span>
+            <img src="./assets/coin.png" alt="coin" class="h-6 inline-block" />
+          </h6>
+        </div>
+
+        <!-- Copy -->
+        <div id="copy" class="cursor-pointer flex justify-center">
+          <h6
+            class="flex flex-row justify-center items-center py-[10px] px-[22px] rounded-[50px] bg-[#00A63E] text-white font-inter text-[16px] font-semibold text-center"
+          >
+            <span id="copy-count" class="px-2">0</span>
+            Copy
+          </h6>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="sm:hidden px-4 py-2">
+        <i class="fa-solid fa-bars text-[24px]"></i>
+      </button>
     </div>
+
+    <!-- -------------------------------------------- -->
     <!-- hero section -->
     <div
       id="hero"
-      class="bg-[linear-gradient(90deg,rgba(1,50,35,1)_0%,rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-white flex flex-col justify-center items-center text-center py-3 px-[60px] h-[270px]"
+      class="bg-[linear-gradient(90deg,rgba(1,50,35,1)_0%,rgba(0,103,71,1)_50%,rgba(1,50,35,1)_100%)] text-white flex flex-col justify-center items-center text-center py-2 px-[40px] sm:py-3 sm:px-[60px] h-[270px]"
     >
       <div>
         <img
@@ -83,22 +163,25 @@
         />
       </div>
       <div
-        class="text-white font-bold text-[24px] sm:text-[32px] md:text-[40px] text-center font-hind-madurai mt-2"
+        class="text-white font-bold text-[16px] sm:text-[32px] md:text-[40px] text-center font-hind-madurai mt-2"
       >
         Emergency Service Directory
       </div>
       <div
-        class="text-white font-semibold text-[16px] sm:text-[12px] md:text-[18px] leading-none tracking-normal text-center font-hind-madurai mt-2"
+        class="text-white font-normal sm:font-semibold text-[12px] sm:text-[16px] md:text-[18px] text-center mt-2"
       >
         Government Emergency Services at Your Fingertip – A Project by
         Government of the People’s Republic of Bangladesh
       </div>
     </div>
     <!-- main section -->
-    <div id="main" class="flex gap-4 px-12 py-6 bg-[#F5FFF6]">
+    <div
+      id="main"
+      class="flex flex-col md:flex-row lg:flex-row gap-4 py-2 px-1 sm:px-12 sm:py-6 bg-[#F5FFF6]"
+    >
       <div
         id="contacts"
-        class="p-4 w-[75%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
+        class="p-4 w-full md:w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"
       >
         <!-- cards 1 -->
         <div
@@ -123,17 +206,20 @@
               All
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -160,17 +246,20 @@
               Police
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -196,17 +285,20 @@
               Fire
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -232,17 +324,20 @@
               Health
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -268,17 +363,20 @@
               Help
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -304,17 +402,20 @@
               Govt.
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -340,17 +441,20 @@
               Electricity
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -376,17 +480,20 @@
               NGO
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
@@ -412,37 +519,46 @@
               Travel
             </p>
           </div>
-          <div class="flex justify-between items-center mt-4 mb-3 gap-2">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center mt-4 mb-3 gap-2"
+          >
             <button
-              class="copy-btn bg-white flex justify-center items-center gap-2 px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
+              class="copy-btn bg-white flex justify-center items-center gap-2 w-full sm:w-auto px-[46px] py-[12px] text-black font-semibold rounded-lg shadow-md hover:bg-[blue] hover:text-white transition border border-[#D4D6D5]"
             >
               <i class="fa-regular fa-copy"></i> Copy
             </button>
 
             <button
-              class="call-btn px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
+              class="call-btn w-full sm:w-auto px-[46px] py-[12px] bg-[#00A63E] text-white font-semibold rounded-lg shadow-md hover:bg-[blue] transition border border-[#D4D6D5] flex justify-center items-center gap-2"
             >
-              <i class="fa-solid fa-phone"></i>Call
+              <i class="fa-solid fa-phone"></i>
+              Call
             </button>
           </div>
         </div>
         <!-- card end -->
       </div>
       <!-- cards end -->
-      <div id="history" class="p-4 w-[25%] bg-white rounded-lg shadow-md mt-4">
-        <div class="flex justify-between items-center mb-3">
+      <div
+        id="history"
+        class="p-4 w-full md:w-1/4 bg-white rounded-lg shadow-md mt-4 mb-[15px] flex flex-col max-h-[400px] sm:max-h-full md:max-h-full overflow-y-auto"
+      >
+        <!-- Header -->
+        <div
+          class="flex justify-between items-center mb-3 sticky top-0 bg-white z-10"
+        >
           <div class="flex gap-2 items-center">
             <i class="fa-solid fa-user-clock"></i>
             <h3 class="font-bold text-[18px]">Call History</h3>
           </div>
           <button
             id="clear-history"
-            class="px-[32px] py-[8px] bg-[#00A63E] text-white font-semibold rounded-[25px] shadow-md hover:bg-white hover:text-black transition border border-[#D4D6D5]"
+            class="px-[24px] py-[6px] bg-[#00A63E] text-white font-semibold rounded-[25px] shadow-md hover:bg-white hover:text-black transition border border-[#D4D6D5] text-[14px]"
           >
             Clear
           </button>
         </div>
-        <div id="history-items"></div>
+        <div id="history-items" class="space-y-3"></div>
 
         <!-- <div>
           <div class="flex justify-between items-center">
