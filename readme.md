@@ -1,39 +1,52 @@
+# Emergency Hotline Directory
+
+A clean and fast emergency hotline directory with category-based filtering and responsive UI. Perfect for quickly accessing emergency services.
 
 ---
 
-## ✅ **3) Emergency Hotline Website**
-
-```md
-# Emergency Hotline Finder
-
-## 📌 Overview
-A quick-access emergency hotline application where users can instantly find important emergency service contacts.
+## 🚀 Live Link
+https://your-live-link.com  
 
 ---
 
-## 🖼️ Screenshot
+## 🖼 Screenshot
 (Add screenshot)
-![Screenshot](YOUR_SCREENSHOT_URL)
 
 ---
 
-## 🚀 Technologies Used
-- React.js  
-- TailwindCSS  
+## 🧰 Technology Used
+- React
+- Tailwind CSS
+- JSON data
 
 ---
 
 ## ⭐ Features
-- Emergency service list
-- Quick call buttons
-- Fully responsive UI
-- Clean and simple design
+- Emergency numbers list
+- Category-wise filtering
+- Mobile-first responsive UI
+- Fast and lightweight
+- Clean modern design
 
 ---
 
 ## 📦 Dependencies
 ```json
-{
-  "react": "^18",
-  "tailwindcss": "^3"
-}
+"react": "^18.x",
+"tailwindcss": "^3.x",
+"react-icons": "^5.x"
+```
+
+---
+
+## 🛠 Local Setup
+```sh
+git clone https://github.com/Sarwar009/ph-B12A05-emergency-hotline
+npm install
+npm run dev
+```
+
+---
+
+## 🧑‍💻 Author
+Sarwar Hossain
